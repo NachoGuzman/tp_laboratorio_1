@@ -91,17 +91,17 @@ void cargaForzada5 (void)
 	diferenciaPrecio= diferenciaPrecioTotal (y,z);
 
 
-	printf("los precios de Aerolinea son \n");
-	printf("el valor de debito es %f  \n", tarjetaDeDebitoY);
-	printf("el valor de credito es %f  \n", tarjetaDeCreditoY);
-	printf("el valor de bitcoin es %f  \n", bitcoinCostoY);
-	printf("el valor unitario es %f  \n", precioUnitarioY);
+	printf("\nLos precios de Aerolinea son: \n");
+	printf("El valor de debito es: %f  \n", tarjetaDeDebitoY);
+	printf("El valor de credito es: %f  \n", tarjetaDeCreditoY);
+	printf("El valor de bitcoin es: %f  \n", bitcoinCostoY);
+	printf("El valor unitario es: %f  \n\n", precioUnitarioY);
 
-	printf("los precios de Latam son \n");
-	printf("el valor de debito es %f  \n", tarjetaDeDebitoZ);
-	printf("el valor de credito es %f  \n", tarjetaDeCreditoZ);
-	printf("el valor de bitcoin es %f  \n", bitcoinCostoZ);
-	printf("el valor unitario es %f  \n", precioUnitarioZ);
+	printf("Los precios de Latam son: \n");
+	printf("El valor de debito es: %f  \n", tarjetaDeDebitoZ);
+	printf("El valor de credito es: %f  \n", tarjetaDeCreditoZ);
+	printf("El valor de bitcoin es: %f  \n", bitcoinCostoZ);
+	printf("El valor unitario es: %f  \n\n", precioUnitarioZ);
 
-	printf("la diferencia de precio entre aerolinea y latam es %f \n ", diferenciaPrecio);
+	printf("la diferencia de precio entre aerolinea y latam es: %f \n", diferenciaPrecio);
 }

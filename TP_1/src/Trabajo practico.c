@@ -24,61 +24,62 @@ La diferencia de precio es : r “
 5. Carga forzada de datos
 6. Salir
  */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include "Funcion.h"
 
 int main(void)
 {
+		float x;
+		float y;
+		float z;
+		int opcion;
+
+
+		float tarjetaDeDebitoZ;
+		float tarjetaDeCreditoZ;
+		float bitcoinCostoZ;
+		float precioUnitarioZ;
+
+
+		float tarjetaDeDebitoY;
+		float tarjetaDeCreditoY;
+		float bitcoinCostoY;
+		float precioUnitarioY;
+
+		float diferenciaPrecio;
+
 	setbuf(stdout, NULL);
-
-	float x;
-	float y;
-	float z;
-	int opcion;
-
-
-	float tarjetaDeDebitoZ;
-	float tarjetaDeCreditoZ;
-	float bitcoinCostoZ;
-	float precioUnitarioZ;
-
-
-	float tarjetaDeDebitoY;
-	float tarjetaDeCreditoY;
-	float bitcoinCostoY;
-	float precioUnitarioY;
-
-	float diferenciaPrecio;
 
 	do
 	{
-		printf("Opcion 1 = Ingrese los kilometros \n");
-		printf("Opcion 2 = Ingresar el coste del viaje \n");
-		printf("Opcion 3 = Calculo de los costos \n");
-		printf("opcion 4 = Informe de resultados \n");
-		printf("Opcion 5 = Carga forzada de datos \n");
-		printf("Opcion 6 = Salir \n\n");
+		printf("\nOpcion 1 = Ingrese los kilometros");
+		printf("\nOpcion 2 = Ingresar el coste del viaje");
+		printf("\nOpcion 3 = Calculo de los costos");
+		printf("\nopcion 4 = Informe de resultados");
+		printf("\nOpcion 5 = Carga forzada de datos");
+		printf("\nOpcion 6 = Salir \n\n");
 		scanf("%d" , &opcion);
 
 		switch (opcion)
 		{
 		case 1:
-			x = pedirNumero ("\nIngrese los kilometros\n");
+			x = pedirNumero ("\nIngrese los kilometros\n\n");
 		break;
 		case 2:
-			y = pedirNumero ("Ingrese el precio de aerolineas");
-			z = pedirNumero ("Ingrese el precio de latam");
+			y = pedirNumero ("\nIngrese el precio de aerolineas\n\n");
+			z = pedirNumero ("\nIngrese el precio de latam\n\n");
 		break;
 		case 3:
-			if (x == 0 || z == 0 || y == 0)
+			if (x < 1 || z < 1 || y < 1)
 			{
 				printf("No se han cargado todos los datos, porfavor reingresar \n");
 				system("pause");
 			}
 			else
 			{
+				printf("\nLos datos han sido cargados, los calculos ya se han realizado\n");
+
 				tarjetaDeDebitoZ= tarjetaDebitoCalcular (z);
 				tarjetaDeCreditoZ= tarjetaCreditoCalcular (z);
 				bitcoinCostoZ = bitcoinCalcular (z);
@@ -93,43 +94,36 @@ int main(void)
 			}
 		break;
 		case 4:
-			if (x == 0 || z == 0 )
+			if (x < 1 || z < 1 || y < 1)
 			{
 					printf("No se han cargado todos los datos, porfavor reingresar \n");
 					system("pause");
 			}
 			else
 			{
-				printf("Los precios de latam son \n");
+				printf("Los precios de latam son: \n");
 				printf("El valor de debito es %f  \n", tarjetaDeDebitoZ);
 				printf("El valor de credito es %f  \n", tarjetaDeCreditoZ);
 				printf("El valor de bitcoin es %f  \n", bitcoinCostoZ);
-				printf("El valor unitario es %f  \n", precioUnitarioZ);
-			}
-			if(x == 0 || y == 0)
-			{
-				printf("no se han cargado todos los datos, porfavor reingresar \n");
-				system("pause");
-			}
-			else
-			{
-				printf("los precios de Aerolinea son \n");
+				printf("El valor unitario es %f  \n\n", precioUnitarioZ);
+
+				printf("los precios de Aerolinea son: \n");
 				printf("el valor de debito es %f  \n", tarjetaDeDebitoY);
 				printf("el valor de credito es %f  \n", tarjetaDeCreditoY);
 				printf("el valor de bitcoin es %f  \n", bitcoinCostoY);
 				printf("el valor unitario es %f  \n", precioUnitarioY);
 
+				printf("\nla diferencia de precio entre aerolinea y latam es %f \n ", diferenciaPrecio);
 			}
-			printf("la diferencia de precio entre aerolinea y latam es %f \n ", diferenciaPrecio);
 		break;
 		case 5:
 			cargaForzada5();
 		break;
 		case 6:
-			printf("Gracias por usar mi programa, esta saliendo del programa");
+			printf("\nGracias por usar mi programa, esta saliendo del programa.");
 		break;
 		default:
-			printf("No es una respuesta valida");
+			printf("No es una respuesta valida\n\n");
 			system("pause");
 		break;
 
