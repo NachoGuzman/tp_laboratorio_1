@@ -28,53 +28,53 @@ La diferencia de precio es : r “
 #include <stdio.h>
 #include <stdlib.h>
 #include "Funcion.h"
-float x;
-float y;
-float z;
-int opcion;
-
-
-float tarjetaDeDebitoZ;
-float tarjetaDeCreditoZ;
-float bitcoinCostoZ;
-float precioUnitarioZ;
-
-
-float tarjetaDeDebitoY;
-float tarjetaDeCreditoY;
-float bitcoinCostoY;
-float precioUnitarioY;
-
-float diferenciaPrecio;
-
 
 int main(void)
 {
 	setbuf(stdout, NULL);
 
+	float x;
+	float y;
+	float z;
+	int opcion;
+
+
+	float tarjetaDeDebitoZ;
+	float tarjetaDeCreditoZ;
+	float bitcoinCostoZ;
+	float precioUnitarioZ;
+
+
+	float tarjetaDeDebitoY;
+	float tarjetaDeCreditoY;
+	float bitcoinCostoY;
+	float precioUnitarioY;
+
+	float diferenciaPrecio;
+
 	do
 	{
-		printf("opcion 1 = Ingrese los kilometros \n");
-		printf("opcion 2 = Ingresar el coste del viaje \n");
-		printf("opcion 3 = Calculo de los costos \n");
-		printf("opcion 4 = informe de resultados \n");
-		printf("opcion 5 = Carga forzada de datos \n");
-		printf("opcion 6 = salir \n");
+		printf("Opcion 1 = Ingrese los kilometros \n");
+		printf("Opcion 2 = Ingresar el coste del viaje \n");
+		printf("Opcion 3 = Calculo de los costos \n");
+		printf("opcion 4 = Informe de resultados \n");
+		printf("Opcion 5 = Carga forzada de datos \n");
+		printf("Opcion 6 = Salir \n\n");
 		scanf("%d" , &opcion);
 
 		switch (opcion)
 		{
 		case 1:
-			x = pedirNumero ("ingrese los kilometros");
+			x = pedirNumero ("\nIngrese los kilometros\n");
 		break;
 		case 2:
-			y = pedirNumero ("ingrese el precio de aerolineas");
-			z = pedirNumero ("ingrese el precio de latam");
+			y = pedirNumero ("Ingrese el precio de aerolineas");
+			z = pedirNumero ("Ingrese el precio de latam");
 		break;
 		case 3:
 			if (x == 0 || z == 0 || y == 0)
 			{
-				printf("no se han cargado todos los datos, porfavor reingresar \n");
+				printf("No se han cargado todos los datos, porfavor reingresar \n");
 				system("pause");
 			}
 			else
@@ -95,16 +95,16 @@ int main(void)
 		case 4:
 			if (x == 0 || z == 0 )
 			{
-					printf("no se han cargado todos los datos, porfavor reingresar \n");
+					printf("No se han cargado todos los datos, porfavor reingresar \n");
 					system("pause");
 			}
 			else
 			{
-				printf("los precios de latam son \n");
-				printf("el valor de debito es %f  \n", tarjetaDeDebitoZ);
-				printf("el valor de credito es %f  \n", tarjetaDeCreditoZ);
-				printf("el valor de bitcoin es %f  \n", bitcoinCostoZ);
-				printf("el valor unitario es %f  \n", precioUnitarioZ);
+				printf("Los precios de latam son \n");
+				printf("El valor de debito es %f  \n", tarjetaDeDebitoZ);
+				printf("El valor de credito es %f  \n", tarjetaDeCreditoZ);
+				printf("El valor de bitcoin es %f  \n", bitcoinCostoZ);
+				printf("El valor unitario es %f  \n", precioUnitarioZ);
 			}
 			if(x == 0 || y == 0)
 			{
